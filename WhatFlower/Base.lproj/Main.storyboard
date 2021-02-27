@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,40 +15,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="f0A-n5-WY5">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="f0A-n5-WY5">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nAr-iK-rGo">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="574"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nAr-iK-rGo">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="559"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="piR-lt-KPV">
-                                        <rect key="frame" x="0.0" y="574" width="414" height="200"/>
+                                        <rect key="frame" x="20" y="574" width="374" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="d9p-pC-83d"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="piR-lt-KPV" secondAttribute="bottom" id="eYW-TV-AJZ"/>
-                                    <constraint firstItem="piR-lt-KPV" firstAttribute="leading" secondItem="f0A-n5-WY5" secondAttribute="leading" id="rdb-Wh-mON"/>
-                                    <constraint firstAttribute="trailing" secondItem="piR-lt-KPV" secondAttribute="trailing" id="zqX-0t-xKT"/>
+                                    <constraint firstAttribute="trailing" secondItem="piR-lt-KPV" secondAttribute="trailing" constant="20" id="I4p-Mk-ULO"/>
+                                    <constraint firstAttribute="bottom" secondItem="piR-lt-KPV" secondAttribute="bottom" id="jpp-Qy-VRB"/>
+                                    <constraint firstItem="piR-lt-KPV" firstAttribute="leading" secondItem="f0A-n5-WY5" secondAttribute="leading" constant="20" id="qRk-FN-O6L"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.027562929986176005" green="0.27515321048038832" blue="0.16967989470848568" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f0A-n5-WY5" secondAttribute="bottom" id="JuB-2J-SiM"/>
-                            <constraint firstItem="f0A-n5-WY5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qUE-ST-zrG"/>
-                            <constraint firstItem="f0A-n5-WY5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uC5-q8-VXa"/>
-                            <constraint firstItem="f0A-n5-WY5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yoI-xM-tgc"/>
+                            <constraint firstItem="f0A-n5-WY5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5Fy-5a-ZTl"/>
+                            <constraint firstItem="f0A-n5-WY5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9Hd-BT-UA5"/>
+                            <constraint firstItem="f0A-n5-WY5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FbU-uD-UAW"/>
+                            <constraint firstItem="f0A-n5-WY5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="go8-bB-fAM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="N0x-rJ-QnT">
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="MBf-6q-tRj">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="cameraTapped:" destination="BYZ-38-t0r" id="W1x-Tt-Afd"/>
                             </connections>
@@ -72,6 +72,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vNw-Bg-8OK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.027562929989999999" green="0.27515321050000002" blue="0.1696798947" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -83,9 +87,4 @@
             <point key="canvasLocation" x="95.652173913043484" y="76.339285714285708"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
