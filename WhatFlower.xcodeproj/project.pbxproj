@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C70407E825EA85AC004E9EDD /* FlowerClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C70407E725EA85AC004E9EDD /* FlowerClassifier.mlmodel */; };
 		C795BE2925E7BB83004F232E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795BE2825E7BB83004F232E /* AppDelegate.swift */; };
 		C795BE2B25E7BB83004F232E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795BE2A25E7BB83004F232E /* SceneDelegate.swift */; };
 		C795BE2D25E7BB83004F232E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795BE2C25E7BB83004F232E /* ViewController.swift */; };
@@ -14,12 +15,12 @@
 		C795BE3325E7BB83004F232E /* WhatFlower.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C795BE3125E7BB83004F232E /* WhatFlower.xcdatamodeld */; };
 		C795BE3525E7BB85004F232E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C795BE3425E7BB85004F232E /* Assets.xcassets */; };
 		C795BE3825E7BB85004F232E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C795BE3625E7BB85004F232E /* LaunchScreen.storyboard */; };
-		C795BE4125EA43DF004F232E /* FlowerClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C795BE4025EA43DF004F232E /* FlowerClassifier.mlmodel */; };
 		FD6EAA2C57B15EE276471261 /* Pods_WhatFlower.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA49455E92066D5110C047CE /* Pods_WhatFlower.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C54498144FBE037A4CB8A287 /* Pods-WhatFlower.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatFlower.debug.xcconfig"; path = "Target Support Files/Pods-WhatFlower/Pods-WhatFlower.debug.xcconfig"; sourceTree = "<group>"; };
+		C70407E725EA85AC004E9EDD /* FlowerClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowerClassifier.mlmodel; sourceTree = "<group>"; };
 		C795BE2525E7BB83004F232E /* WhatFlower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatFlower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C795BE2825E7BB83004F232E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C795BE2A25E7BB83004F232E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +30,6 @@
 		C795BE3425E7BB85004F232E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C795BE3725E7BB85004F232E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C795BE3925E7BB85004F232E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C795BE4025EA43DF004F232E /* FlowerClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowerClassifier.mlmodel; sourceTree = "<group>"; };
 		DA49455E92066D5110C047CE /* Pods_WhatFlower.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatFlower.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD978DA042CB684B5EE6B45 /* Pods-WhatFlower.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatFlower.release.xcconfig"; path = "Target Support Files/Pods-WhatFlower/Pods-WhatFlower.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,6 @@
 				C54498144FBE037A4CB8A287 /* Pods-WhatFlower.debug.xcconfig */,
 				DFD978DA042CB684B5EE6B45 /* Pods-WhatFlower.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -93,7 +92,7 @@
 				C795BE3625E7BB85004F232E /* LaunchScreen.storyboard */,
 				C795BE3925E7BB85004F232E /* Info.plist */,
 				C795BE3125E7BB83004F232E /* WhatFlower.xcdatamodeld */,
-				C795BE4025EA43DF004F232E /* FlowerClassifier.mlmodel */,
+				C70407E725EA85AC004E9EDD /* FlowerClassifier.mlmodel */,
 			);
 			path = WhatFlower;
 			sourceTree = "<group>";
@@ -215,7 +214,7 @@
 				C795BE2D25E7BB83004F232E /* ViewController.swift in Sources */,
 				C795BE2925E7BB83004F232E /* AppDelegate.swift in Sources */,
 				C795BE3325E7BB83004F232E /* WhatFlower.xcdatamodeld in Sources */,
-				C795BE4125EA43DF004F232E /* FlowerClassifier.mlmodel in Sources */,
+				C70407E825EA85AC004E9EDD /* FlowerClassifier.mlmodel in Sources */,
 				C795BE2B25E7BB83004F232E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

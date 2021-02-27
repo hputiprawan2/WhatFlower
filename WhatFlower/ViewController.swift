@@ -8,6 +8,8 @@
 import UIKit
 import CoreML
 import Vision
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController {
 
@@ -15,11 +17,12 @@ class ViewController: UIViewController {
     
     private let imagePicker = UIImagePickerController()
     private var pickedImage: UIImage?
+    private let wikipediaURL = "https://en.wikipedia.org/w/api.php"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-        imagePicker.allowsEditing =  false // true; allow user to crop a photo
+        imagePicker.allowsEditing = false // true; allow user to crop a photo
         imagePicker.sourceType = .camera
     }
 
@@ -34,11 +37,11 @@ class ViewController: UIViewController {
         
         // Make a request ask model to classify data
         let request = VNCoreMLRequest(model: model) { (request, error) in
-            guard let result = request.results as? [VNClassificationObservation] else {
+            guard let result = request.results?.first as? VNClassificationObservation else {
                 fatalError("Model failed to process image")
             }
-            self.navigationItem.title = result.first?.identifier.capitalized ?? "Unidentify!"
-            print(result)
+            self.navigationItem.title = result.identifier.capitalized
+            
         }
         
         // Perform classify image
@@ -61,6 +64,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
                 fatalError("Could not convert image to CIImage")
             }
             pickedImage = userPickedImage
+            imageView.image = pickedImage
             detect(flowerImage: ciImage)
         }
         imagePicker.dismiss(animated: true, completion: nil)
