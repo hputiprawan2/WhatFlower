@@ -15,14 +15,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="f0A-n5-WY5">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="z5I-yR-m3a">
+                                <rect key="frame" x="0.0" y="103" width="414" height="759"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nAr-iK-rGo">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="559"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="549"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="piR-lt-KPV">
-                                        <rect key="frame" x="20" y="574" width="374" height="200"/>
+                                        <rect key="frame" x="20" y="559" width="374" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="d9p-pC-83d"/>
                                         </constraints>
@@ -32,19 +32,21 @@
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="piR-lt-KPV" secondAttribute="trailing" constant="20" id="I4p-Mk-ULO"/>
-                                    <constraint firstAttribute="bottom" secondItem="piR-lt-KPV" secondAttribute="bottom" id="jpp-Qy-VRB"/>
-                                    <constraint firstItem="piR-lt-KPV" firstAttribute="leading" secondItem="f0A-n5-WY5" secondAttribute="leading" constant="20" id="qRk-FN-O6L"/>
+                                    <constraint firstAttribute="trailing" secondItem="nAr-iK-rGo" secondAttribute="trailing" constant="20" id="2Pc-yg-GdJ"/>
+                                    <constraint firstItem="piR-lt-KPV" firstAttribute="leading" secondItem="z5I-yR-m3a" secondAttribute="leading" constant="20" id="GDo-Ai-npm"/>
+                                    <constraint firstAttribute="bottom" secondItem="piR-lt-KPV" secondAttribute="bottom" id="Rz8-pY-LrZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="piR-lt-KPV" secondAttribute="trailing" constant="20" id="frp-VV-QYd"/>
+                                    <constraint firstItem="nAr-iK-rGo" firstAttribute="leading" secondItem="z5I-yR-m3a" secondAttribute="leading" constant="20" id="mQk-X4-jXC"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.027562929986176005" green="0.27515321048038832" blue="0.16967989470848568" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="f0A-n5-WY5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5Fy-5a-ZTl"/>
-                            <constraint firstItem="f0A-n5-WY5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9Hd-BT-UA5"/>
-                            <constraint firstItem="f0A-n5-WY5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FbU-uD-UAW"/>
-                            <constraint firstItem="f0A-n5-WY5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="go8-bB-fAM"/>
+                            <constraint firstItem="z5I-yR-m3a" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ay4-I5-fef"/>
+                            <constraint firstItem="z5I-yR-m3a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="OSU-c4-AMZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z5I-yR-m3a" secondAttribute="bottom" id="iNO-zb-Pd7"/>
+                            <constraint firstItem="z5I-yR-m3a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vRh-F3-7bp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="N0x-rJ-QnT">
