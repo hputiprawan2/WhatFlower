@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-        imagePicker.allowsEditing = false
+        imagePicker.allowsEditing =  false // true; allow user to crop a photo
         imagePicker.sourceType = .camera
     }
 
@@ -27,6 +27,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//        let userPickedImage = info[UIImagePickerController.InfoKey.editedImage]
         let userPickedImage = info[UIImagePickerController.InfoKey.originalImage]
         
         imageView.image = userPickedImage as? UIImage
