@@ -37,7 +37,8 @@ class ViewController: UIViewController {
             guard let result = request.results as? [VNClassificationObservation] else {
                 fatalError("Model failed to process image")
             }
-            self.navigationItem.title = result.first?.identifier ?? "Unidentify!"
+            self.navigationItem.title = result.first?.identifier.capitalized ?? "Unidentify!"
+            print(result)
         }
         
         // Perform classify image
@@ -55,6 +56,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 //        let userPickedImage = info[UIImagePickerController.InfoKey.editedImage]
         if let userPickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            // Convert image to CIImage
             guard let ciImage = CIImage(image: userPickedImage) else {
                 fatalError("Could not convert image to CIImage")
             }
