@@ -14,6 +14,7 @@ import SwiftyJSON
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var label: UILabel!
     
     private let imagePicker = UIImagePickerController()
     private var pickedImage: UIImage?
@@ -41,7 +42,7 @@ class ViewController: UIViewController {
                 fatalError("Model failed to process image")
             }
             self.navigationItem.title = result.identifier.capitalized
-            
+            self.requestInfo(flowerName: result.identifier)
         }
         
         // Perform classify image
@@ -51,6 +52,34 @@ class ViewController: UIViewController {
         } catch {
             print(error)
         }
+    }
+    
+    private func requestInfo(flowerName: String) {
+        let parameters: [String: String] = [
+            "format"    : "json",
+            "action"    : "query",
+            "prop"      : "extracts",
+            "exintro"   : "",
+            "explaintext": "",
+            "titles"    : flowerName,
+            "indexpageids": "",
+            "redirects" : "1"
+        ]
+        Alamofire.request(wikipediaURL, method: .get, parameters: parameters).responseJSON { (response) in
+            if response.result.isSuccess {
+                print("Successfully retrieved wikipedia info.")
+                print(response)
+                
+                // SwiftyJSON
+                let flowerJSON: JSON = JSON(response.result.value!) // safe to unwrap cuz inside isSuccess
+                let pageId = flowerJSON["query"]["pageids"][0].stringValue // get the first value of pageId
+                let flowerDescription = flowerJSON["query"]["pages"][pageId]["extract"].stringValue
+                
+                self.label.text = flowerDescription
+                
+            }
+        }
+        
         
     }
 }
